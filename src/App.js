@@ -11,8 +11,6 @@ const App = () => {
   const [clickedPokemonData, setClickedPokemonData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      //   const data = await fetchPokemonData();
-      //   console.log(data);
       setPokemonsData((await fetchPokemonData()).results);
       console.log(pokemonsData);
     };
@@ -32,11 +30,7 @@ const App = () => {
             height="100vh"
           >
             <Header />
-            <Box
-              display="flex"
-              margin="auto 0"
-              alignItems="center"
-            >
+            <Box display="flex" margin="auto 0" alignItems="center">
               <PokemonChips
                 pokemons={pokemonsData}
                 setClickedPokemonData={setClickedPokemonData}
