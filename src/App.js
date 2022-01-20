@@ -23,17 +23,20 @@ const App = () => {
     <>
       <CssBaseline />
       <Box backgroundColor="#131313" color="white">
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           <Box
             display="flex"
             flexDirection="column"
             pt={10}
             pb={10}
             height="100vh"
-            maxWidth="md"
           >
             <Header />
-            <Box display="flex" margin="auto 0" alignItems="center">
+            <Box
+              display="flex"
+              margin="auto 0"
+              alignItems="center"
+            >
               <PokemonChips
                 pokemons={pokemonsData}
                 setClickedPokemonData={setClickedPokemonData}
