@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { Box, Container, CssBaseline } from "@mui/material";
 
-function App() {
+import Header from "./components/Header";
+import PokemonChips from "./components/PokemonChips";
+import PokemonInfo from "./components/PokemonInfo";
+import { fetchPokemonData } from "./api/fetchApi";
+
+const App = () => {
+  const [pokemonsData, setPokemonsData] = useState();
+  const [clickedPokemonData, setClickedPokemonData] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      //   const data = await fetchPokemonData();
+      //   console.log(data);
+      setPokemonsData((await fetchPokemonData()).results);
+      console.log(pokemonsData);
+    };
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Box backgroundColor="#131313" color="white">
+        <Container maxWidth="md">
+          <Box
+            display="flex"
+            flexDirection="column"
+            pt={10}
+            pb={10}
+            height="100vh"
+            maxWidth="md"
+          >
+            <Header />
+            <Box display="flex" margin="auto 0" alignItems="center">
+              <PokemonChips
+                pokemons={pokemonsData}
+                setClickedPokemonData={setClickedPokemonData}
+              />
+              <PokemonInfo clickedPokemonData={clickedPokemonData} />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+    </>
   );
-}
+};
 
 export default App;
