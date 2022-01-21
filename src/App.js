@@ -22,20 +22,21 @@ const App = () => {
   return (
     <>
       <CssBaseline />
-      <Box backgroundColor="#131313" color="white">
-        <Container maxWidth="lg">
+      <Box backgroundColor="#131313" color="white" height="100vh">
+        <Box maxWidth="980px" margin="0 auto" display="flex">
           <Box
             display="flex"
+            flexGrow="1"
             flexDirection="column"
+            justifyContent="space-between"
             padding="100px 0"
-            height="100vh"
           >
             <Header />
             <Box
               display="flex"
-              margin="auto 0"
               alignItems="center"
               justifyContent="space-between"
+              height="500px"
             >
               <PokemonChips
                 pokemons={pokemonsData}
@@ -44,7 +45,7 @@ const App = () => {
               <PokemonInfo clickedPokemonData={clickedPokemonData} />
             </Box>
           </Box>
-        </Container>
+        </Box>
       </Box>
     </>
   );

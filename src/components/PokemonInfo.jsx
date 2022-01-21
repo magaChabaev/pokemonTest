@@ -11,7 +11,13 @@ const PokemonInfo = ({ clickedPokemonData }) => {
         display="flex"
         flexDirection="column"
       >
-        <Typography padding="44px" color="#A0A0A0" variant="h3" fontWeight='700'>
+        <Typography
+          padding="44px"
+          color="#A0A0A0"
+          fontSize="48px"
+          lineHeight="48px"
+          fontWeight="700"
+        >
           {clickedPokemonData?.name.slice(0, 1).toUpperCase() +
             clickedPokemonData?.name.slice(1)}
         </Typography>
@@ -23,13 +29,37 @@ const PokemonInfo = ({ clickedPokemonData }) => {
             margin: "auto auto 0 auto",
           }}
         />
-        <Box padding="44px 44px 16px 44px" color="lightgray">
-          <Typography>
+        <Box padding="44px 44px 16px 44px">
+          <Typography
+            fontSize="17px"
+            lineHeight="25.5px"
+            fontWeight="500"
+            color="#A0A0A0"
+          >
             Снялся в {clickedPokemonData.moves.length} сериях
           </Typography>
-          <Typography>id: {clickedPokemonData?.id}</Typography>
-          <Typography>height: {clickedPokemonData?.height}</Typography>
-          <Typography>
+          <Typography
+            fontSize="17px"
+            lineHeight="25.5px"
+            fontWeight="500"
+            color="#A0A0A0"
+          >
+            Id: {clickedPokemonData?.id}
+          </Typography>
+          <Typography
+            fontSize="17px"
+            lineHeight="25.5px"
+            fontWeight="500"
+            color="#A0A0A0"
+          >
+            height: {clickedPokemonData?.height}
+          </Typography>
+          <Typography
+            fontSize="17px"
+            lineHeight="25.5px"
+            fontWeight="500"
+            color="#A0A0A0"
+          >
             attack: {clickedPokemonData?.stats[1].base_stat}
           </Typography>
         </Box>

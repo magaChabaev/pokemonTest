@@ -1,3 +1,5 @@
 * {
+  letter-spacing: 0 !important;
+  box-sizing: border-box !important;
   font-family: "Raleway", sans-serif !important;
 }

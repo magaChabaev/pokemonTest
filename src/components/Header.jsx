@@ -5,26 +5,31 @@ import cursor from "../assets/Icon.png";
 
 const Header = () => {
   return (
-    <Box display="flex" justifyContent="space-between" alignItems="center">
-      <Typography
-        border={1}
-        display="inline"
-        padding="4px"
-        fontSize="0.75rem"
-        fontWeight="500"
-      >
-        Покемоны API
-      </Typography>
+    <Box display="flex" justifyContent="space-between" alignItems="center" marginBottom='54px'>
+      <Box border={1} width='107px' height='28px' textAlign='center'>
+        <Typography
+          lineHeight='13.52px'
+          display="inline"
+          fontSize="12px"
+          fontWeight="500"
+        >
+          ПОКЕМОНЫ API
+        </Typography>
+      </Box>
       <Box display="flex" alignItems="center">
         <img
           src={cursor}
           alt="image"
-          className="img"
-          style={{ width: "20px", height: "24px", marginRight: "10px" }}
+          style={{ width: "24.25px", height: "30.66px", marginRight: "11px" }}
         />
-        <Typography display="inline" fontSize="0.75rem" fontWeight="500">
+        <Typography
+          display="inline"
+          fontSize="12px"
+          fontWeight="600"
+          lineHeight="12px"
+        >
           Нажмите на <br />
-          нужного покемона
+          нужное Покемона
         </Typography>
       </Box>
     </Box>

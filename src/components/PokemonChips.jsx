@@ -2,7 +2,6 @@ import React from "react";
 import { Chip, Box } from "@mui/material";
 
 import { fetchClickedPokemonData } from "../api/fetchApi";
-import { display } from "@mui/system";
 
 const PokemonChips = ({ pokemons, setClickedPokemonData }) => {
   const onClickHandle = async (name) => {
@@ -15,11 +14,12 @@ const PokemonChips = ({ pokemons, setClickedPokemonData }) => {
           label={el.name}
           key={index}
           sx={{
-            marginRight: "6px",
-            marginTop: "10px",
+            margin: "5px 8px 5px 0px",
             height: "60px",
-            padding: "0 5px",
-            fontSize: "1.25rem",
+            padding: "0 8px",
+            lineHeight: "20px",
+            fontWeight: "500px",
+            fontSize: "20px",
             borderRadius: "44px",
           }}
           color="info"
