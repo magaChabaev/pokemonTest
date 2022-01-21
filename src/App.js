@@ -6,6 +6,8 @@ import PokemonChips from "./components/PokemonChips";
 import PokemonInfo from "./components/PokemonInfo";
 import { fetchPokemonData } from "./api/fetchApi";
 
+import "./App.css";
+
 const App = () => {
   const [pokemonsData, setPokemonsData] = useState();
   const [clickedPokemonData, setClickedPokemonData] = useState(null);
@@ -25,12 +27,16 @@ const App = () => {
           <Box
             display="flex"
             flexDirection="column"
-            pt={10}
-            pb={10}
+            padding="100px 0"
             height="100vh"
           >
             <Header />
-            <Box display="flex" margin="auto 0" alignItems="center">
+            <Box
+              display="flex"
+              margin="auto 0"
+              alignItems="center"
+              justifyContent="space-between"
+            >
               <PokemonChips
                 pokemons={pokemonsData}
                 setClickedPokemonData={setClickedPokemonData}

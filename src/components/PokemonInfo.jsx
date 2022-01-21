@@ -11,7 +11,7 @@ const PokemonInfo = ({ clickedPokemonData }) => {
         display="flex"
         flexDirection="column"
       >
-        <Typography padding="40px" color="lightgray" variant="h5">
+        <Typography padding="44px" color="#A0A0A0" variant="h3" fontWeight='700'>
           {clickedPokemonData?.name.slice(0, 1).toUpperCase() +
             clickedPokemonData?.name.slice(1)}
         </Typography>
@@ -20,10 +20,10 @@ const PokemonInfo = ({ clickedPokemonData }) => {
           style={{
             width: "396px",
             height: "200px",
-            margin: "auto",
+            margin: "auto auto 0 auto",
           }}
         />
-        <Box padding="40px" color="lightgray">
+        <Box padding="44px 44px 16px 44px" color="lightgray">
           <Typography>
             Снялся в {clickedPokemonData.moves.length} сериях
           </Typography>
